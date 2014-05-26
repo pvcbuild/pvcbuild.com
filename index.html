@@ -248,7 +248,38 @@
 	<section id="build-a-plugin">
 		<div class="container">
 			<h1>Build a Plugin</h1>
-			<p>How to build a plugin.</p>
+			<p>Extending and creating a plugin in PVC is incredibly simple. Start out by running the init script: <code>pvc install plugin</code></p>
+			<br />
+			<p>
+			Your plugin class will extend <code>PvcPlugins.PvcPlugin</code> and implement the streaming interface.
+			</p>
+			<pre><code class="null language-csharp">public override IEnumerable<PvcStream> Execute(IEnumerable<PvcStream> inputStreams)
+{
+    var resultStreams = new List&lt;PvcStream&gt;();
+
+    foreach (var inputStream in inputStreams)
+    {
+        // Do things with Streams, add to results
+        resultStreams.Add(inputStream);
+    }
+
+    return resultStreams;
+}</code></pre>
+		<p>
+		A plugin can filter the streams passed to it by overriding the <code>SupportedTags</code> property.
+		</p>
+		<pre><code class="null language-csharp">// Only pass in LESS streams
+public override string[] SupportedTags
+{
+    get
+    {
+        return new string[] { ".less" };
+    }
+}</code></pre>
+
+		<p>Every plugin in the pipeline has full control to add or remove any streams at will. If you're interested in
+		building a plugin, checkout our <a href="https://github.com/pvcbuild/pvc/issues?direction=desc&labels=plugin%2Chelp+wanted&page=1&sort=updated&state=open" target="_blank">plugin request list</a> for ideas!</p>
+
 		</div>
 	</section>
 
