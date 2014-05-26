@@ -39,9 +39,14 @@ h1 { margin-bottom: 1em; }
 	padding-bottom: 4%;
 }
 
-#scriptcs, #plugins, #contributors, #getting-started, #scaffolding, #build-a-plugin {
+#scriptcs, #plugins, #getting-started, #scaffolding, #build-a-plugin {
 	padding-top: 4%;
 	padding-bottom: 4%;
+}
+
+#contributors {
+	padding-top: 10px;
+	padding-bottom: 25px;
 }
 
 #getting-started, #plugins, #build-a-plugin {
@@ -177,9 +182,6 @@ h1 { margin-bottom: 1em; }
 }
 
 .plugin-listing table {
-	margin-left: auto;
-	width: 60%;
-	margin-left: 20%;
 	font-size: 1.2em;
 }
 
@@ -196,7 +198,31 @@ h1 { margin-bottom: 1em; }
 .media-body p { font-size: 1.0em; }
 .media-body ul { list-style-type: none; }
 
-#contributors { background: #c3fcff; width:100%; padding-top:10px; padding-bottom:10px; }
+#contributors { background: #c3fcff; width:100%; }
+
+ul.contributor-list {
+	list-style-type: none;
+	position: relative;
+	text-align: center;
+	padding: 0;
+}
+
+ul.contributor-list li {
+	display: inline-block;
+	text-align: center;
+	padding-right: 5px;
+}
+
+ul.contributor-list .media-object {
+	margin: 0 auto;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+}
+
+ul.contributor-list .media-object {
+	max-width: 35px;
+}
 
 /******************************** Footer ********************************************/
 
@@ -332,25 +358,3 @@ color: #66d9ef;
 	cursor: help;
 }
 
-ul.contributor-list {
-	list-style-type: none;
-	position: relative;
-	text-align: center;
-}
-
-ul.contributor-list li {
-	display: inline-block;
-	text-align: center;
-	padding-right: 5px;
-}
-
-ul.contributor-list .media-object {
-	margin: 0 auto;
-	-webkit-border-radius: 35px;
-	-moz-border-radius: 35px;
-	border-radius: 35px;
-}
-
-ul.contributor-list .media-object {
-	max-width: 35px;
-}
