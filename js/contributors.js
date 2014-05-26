@@ -54,13 +54,12 @@
 			var elements = [];
 			contributors.forEach(function (contributor) {
 				elements.push("<li>" + 
-						"<img class=\"media-object\" src=\"" + contributor.avatar_url + "s=35\" class=avatar />" +
-						(
-							contributor.hasLink ?
-								"<span class=name><a href=\"https://github.com/" + contributor.login + "\" target=\"_blank\">@" + contributor.login + "</a></span>"
-							:
-								"<span class=name>" + contributor.login + "</span>"
-						) + 
+					(contributor.hasLink ? "<a href=\"https://github.com/" + contributor.login + "\" target=\"_blank\">" : "") +
+					"<img title=\"@" + contributor.login + "\" class=\"media-object\" src=\"" + contributor.avatar_url + "s=35\" class=avatar />" +
+					"<span title=\"@" + contributor.login + "\" class=name>" +
+					(contributor.hasLink ? "@" : "") +
+					contributor.login + "</span>" +
+					(contributor.hasLink ? "</a>" : "") +
 				"</li>");
 			});
 
