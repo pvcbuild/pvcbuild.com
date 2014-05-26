@@ -66,6 +66,22 @@ h1 { margin-bottom: 1em; }
 	margin-top: -10px;
 }
 
+.navbar-default .navbar-icons > li > a {
+	padding-right: 30px;
+	padding-left: 4px;
+}
+
+.navbar-default .navbar-icons > li > a.icon-link {
+	padding: 10px 0 0;
+	position: relative;
+	font-size: 32px;
+	color: #00484d;
+}
+
+.icon-link-github {
+	margin-right: 4px;
+}
+
 .jumbotron {
 	position: relative;
 	z-index: 2;
@@ -167,7 +183,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
+	margin: 0 0 20px 0;
 	overflow: auto;
 	border-radius: 0.3em;
 }
