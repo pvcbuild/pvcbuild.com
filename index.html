@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>PVC - A streaming build tool.</title>
+	<title>PVC - A streaming build ecosystem</title>
 
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -151,8 +151,6 @@
 
 			<p>Plugins provide the functionality that makes PVC nice to use. Like we saw in the Getting Started section, you can install plugins from the command line using <code>pvc install Pvc.PluginName</code></p>
 
-			
-
 			<div class="plugin-listing">
 				<table class="table">
 					<thead>
@@ -216,8 +214,34 @@
 
 	<section id="installers">
 		<div class="container">
-			<h1>Installers</h1>
-			<p>How to use installers.</p>
+			<h1>Scaffolding</h1>
+			<p>PVC supports scaffolding new applications and components using <code>pvc init template-name</code></p>
+			<br />
+			<pre class=""><code class="null language-csharp">// Sample from https://github.com/pvcbuild/pvc-init-templates/blob/master/plugin.json
+{
+    "templateRepo": "https://github.com/pvcbuild/pvc-init-plugin.git",
+    "replacementExtensions": [".cs", ".csproj", ".nuspec", ".sln", "LICENSE"],
+    "config": {
+        "pluginName": null,
+        "license": null
+    },
+    "prompts": {
+        "Plugin Name: ": {
+            "field": "pluginName"
+        },
+        "License: ": {
+            "field": "license",
+            "options": [
+                ["MIT"],
+                ["Apache 2", "Apache2"],
+                ["BSD"],
+                ["None (will add later)", null]
+            ],
+            "choose": "LICENSE"
+        }
+    }
+}</code></pre>
+			<p>A template consists of a simple JSON file that links to a git repository, configuration variables and prompts. To add your own templates make a pull request against the <a href="https://github.com/pvcbuild/pvc-init-templates" target="_blank">pvc-init-templates</a> repository.</p>
 		</div>
 	</section>
 
