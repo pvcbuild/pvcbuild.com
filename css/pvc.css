@@ -39,12 +39,12 @@ h1 { margin-bottom: 1em; }
 	padding-bottom: 4%;
 }
 
-#plugins, #contributors, #getting-started, #scaffolding, #build-a-plugin {
+#scriptcs, #plugins, #contributors, #getting-started, #scaffolding, #build-a-plugin {
 	padding-top: 4%;
 	padding-bottom: 4%;
 }
 
-#getting-started, #scaffolding {
+#getting-started, #plugins, #build-a-plugin {
 	background: #fdffff;
 }
 
@@ -71,7 +71,7 @@ h1 { margin-bottom: 1em; }
 	padding-left: 4px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 920px) {
 	.navbar-default .navbar-icons > li > a.icon-link {
 		padding: 10px 0 0;
 		position: relative;
@@ -89,7 +89,7 @@ h1 { margin-bottom: 1em; }
 	}
 }
 
-@media (min-width: 768px) and (max-width: 850px) {
+@media (min-width: 768px) and (max-width: 890px) {
 	.navbar-default .navbar-icons > li > a.icon-link span {
 		display: none !important;
 	}
@@ -102,7 +102,7 @@ h1 { margin-bottom: 1em; }
 }
 
 .navbar-collapse {
-	max-height: 384px;
+	max-height: 414px;
 }
 
 .navbar-default .navbar-icons > li > a.icon-link > i {
@@ -147,7 +147,7 @@ h1 { margin-bottom: 1em; }
 	max-width: 75%;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 980px) {
 	.navbar-nav>li>a { padding-right: 10px; padding-left: 10px; }
 	.navbar-default .navbar-icons > li > a.icon-text { display: none; }
 	.navbar-default .navbar-icons > li > a.icon-link { padding-right: 10px; }
@@ -158,6 +158,10 @@ h1 { margin-bottom: 1em; }
 #features .feature-icon {
 	font-size: 64px;
 	color: #00484d;
+}
+
+#features .row > div {
+	padding-top: 30px;
 }
 
 /******************************** Plugins section ***********************************/
