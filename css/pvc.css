@@ -39,12 +39,12 @@ h1 { margin-bottom: 1em; }
 	padding-bottom: 4%;
 }
 
-#plugins, #contributors, #getting-started, #installers, #build-a-plugin {
+#plugins, #contributors, #getting-started, #scaffolding, #build-a-plugin {
 	padding-top: 4%;
 	padding-bottom: 4%;
 }
 
-#getting-started, #installers {
+#getting-started, #scaffolding {
 	background: #fdffff;
 }
 
