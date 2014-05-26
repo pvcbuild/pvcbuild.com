@@ -84,19 +84,37 @@ h1 { margin-bottom: 1em; }
 
 .jumbotron {
 	position: relative;
-	z-index: 2;
-	background: #002527;
 	text-align: center;
+
+	background: #002527; /* Old browsers */
+	background: -moz-linear-gradient(top,  #003235 0%, #002c2d 44%, #002527 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#003235), color-stop(44%,#002c2d), color-stop(100%,#002527)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #003235 0%,#002c2d 44%,#002527 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #003235 0%,#002c2d 44%,#002527 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #003235 0%,#002c2d 44%,#002527 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #003235 0%,#002c2d 44%,#002527 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003235', endColorstr='#002527',GradientType=0 ); /* IE6-9 */
+
+	z-index: 2;
+	/* Fix z-index in Webkit */
 	-webkit-transform: translate3d(0,0,0);
 }
+
 .jumbotron img {
 	max-width: 75%;
+}
+
+@media only screen and (max-width: 950px) {
+	.navbar-nav>li>a { padding-right: 10px; padding-left: 10px; }
+	.navbar-default .navbar-icons > li > a.icon-text { display: none; }
+	.navbar-default .navbar-icons > li > a.icon-link { padding-right: 10px; }
 }
 
 /******************************** Features section **********************************/
 
 #features .feature-icon {
 	font-size: 64px;
+	color: #00484d;
 }
 
 /******************************** Plugins section ***********************************/
