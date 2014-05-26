@@ -1,0 +1,252 @@
+body {
+	background: #edfeff;
+	font-family: "Maven Pro";
+}
+
+a { color: #008e96; }
+a:hover { color: #005c61; }
+
+p { font-size: 1.8em; }
+
+.container { text-align: center; }
+ul { text-align: left; }
+
+div.code { padding: 0; }
+code, pre { text-align: left; }
+code.terminal { background: #272822; color: #f8f8f2; }
+code.terminal:before { content: '>'; color: #666; }
+pre.csx { background: #eee; color: #002527; }
+pre[class*=language-] { margin: 0; }
+pre[class*=language-]>code[data-language]::before { display: none; }
+
+.null {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+
+h1 { margin-bottom: 1em; }
+
+/******************************** Page Sections *************************************/
+
+#about-pvc {
+	padding-top: 4%;
+	padding-bottom: 3%;
+}
+
+#features {
+	padding-top: 3%;
+	padding-bottom: 4%;
+}
+
+#plugins, #contributors, #getting-started, #installers, #build-a-plugin {
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
+
+#getting-started, #installers {
+	background: #fdffff;
+}
+
+#footer {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background: #002527;
+}
+
+/******************************** Header ********************************************/
+
+.navbar {
+	z-index: 1;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.navbar-brand img {
+	width: 60px;
+	margin-top: -10px;
+}
+
+.jumbotron {
+	position: relative;
+	z-index: 2;
+	background: #002527;
+	text-align: center;
+	-webkit-transform: translate3d(0,0,0);
+}
+.jumbotron img {
+	max-width: 75%;
+}
+
+/******************************** Features section **********************************/
+
+#features .feature-icon {
+	font-size: 64px;
+}
+
+/******************************** Plugins section ***********************************/
+
+.plugin-listing {
+	text-align: left;
+}
+
+.plugin-listing .table > thead > tr > th {
+	text-align: center;
+	font-size: 1.4em;
+	padding: 20px;
+}
+
+.plugin-listing table {
+	margin-left: auto;
+	width: 60%;
+	margin-left: 20%;
+	font-size: 1.2em;
+}
+
+/******************************** Contributors section ******************************/
+
+#pipemaster .media-body h4 { font-size: 1.8em; }
+#pipemaster .media-body p { font-size: 1.2em; }
+#pipemaster img { width: 96px; border: 8px #00b7c2 solid; border-radius: 8px; }
+.contributors img { width: 64px; border: 6px #00b7c2 solid; border-radius: 6px; }
+.contributors { text-align: left; }
+.contributors .media { padding: 20px; }
+.media-body { text-align: left; }
+.media-body h4 { font-size: 1.4em; }
+.media-body p { font-size: 1.0em; }
+.media-body ul { list-style-type: none; }
+
+#contributors { background: #c3fcff; width:100%; padding-top:10px; padding-bottom:10px; }
+
+/******************************** Footer ********************************************/
+
+#footer {
+	color: #00484d;
+}
+
+#footer .credits {
+	text-align: left;
+}
+
+#footer .credits img {
+	opacity: .25;
+	width: 128px;
+}
+
+#footer .copyright {
+	text-align: right;
+}
+
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=clike+csharp */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	text-shadow: 0 1px rgba(0,0,0,0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number{
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+	color: #a6e22e;
+}
+
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value
+{
+	color: #e6db74;
+}
+
+
+.token.keyword{
+color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important {
+	font-weight: bold;
+}
+
+.token.entity {
+	cursor: help;
+}
