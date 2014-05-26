@@ -19,6 +19,6 @@ pvc.Task("push", () => {
 		accessKey: keys.accessKey,
 		secretKey: keys.secretKey,
 		bucketName: "pvcbuild.com",
-		distributionId: "E13RNZ6AJTCYUR"
+		distributionId: "E14SDHYZMIXL95"
 	   ));
 });
