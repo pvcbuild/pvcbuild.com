@@ -71,11 +71,54 @@ h1 { margin-bottom: 1em; }
 	padding-left: 4px;
 }
 
+@media (min-width: 900px) {
+	.navbar-default .navbar-icons > li > a.icon-link {
+		padding: 10px 0 0;
+		position: relative;
+		line-height: 32px;
+		padding-right: 10px;
+	}
+
+	.navbar-default .navbar-icons > li > a.icon-link > span {
+		vertical-align: top !important;
+	}
+
+	.navbar-default .navbar-icons > li > a.icon-link > i {
+		font-size: 32px !important;
+		color: #00484d;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+	.navbar-default .navbar-icons > li > a.icon-link span {
+		display: none !important;
+	}
+}
+
+@media (max-width: 768px){
+	.navbar-default .navbar-icons > li > span.connect-text {
+		display: block !important;
+	}
+}
+
+.navbar-collapse {
+	max-height: 384px;
+}
+
+.navbar-default .navbar-icons > li > a.icon-link > i {
+	font-size: 16px;
+	padding-left: 5px;
+}
+
 .navbar-default .navbar-icons > li > a.icon-link {
-	padding: 10px 0 0;
-	position: relative;
-	font-size: 32px;
-	color: #00484d;
+	vertical-align: bottom;
+}
+
+.navbar-default .navbar-icons > li > span.connect-text {
+	padding-left: 10px;
+	padding-top: 10px;
+	display: none;
+	font-weight: bold;
 }
 
 .icon-link-github {
