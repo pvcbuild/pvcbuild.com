@@ -118,7 +118,8 @@
 			<p>Install some plugins.</p>
 			<div class="row">
 				<code class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 well terminal">
-					pvc install Pvc.Less
+					pvc install Pvc.Less;
+					pvc install Pvc.MSBuild
 				</code>
 			</div>
 
@@ -126,21 +127,34 @@
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 code">
 					<pre class=""><code class="null language-csharp">pvc.Task("default", () => {
-    pvc.Source("*.less", "*.sass")
-       .PipeIf("less$", new PvcLess())
-       .PipeIf("(sass|scss)$", new PvcSass())
+    pvc.Source("*.less")
+       .Pipe(new PvcLess())
        .Save("~/deploy");
+});
+
+pvc.Task("build", () => {
+	pvc.Source("WebApplication.sln")
+		.Pipe(new PvcMSBuild(
+			buildTarget: "Clean;Build"
+	        enableParallelism: true
+		));
 });</code></pre>
 				</div>
 			</div>
 
-			<p>And let the magic happen:</p>
+			<p>And let the magic happen (compile your LESS):</p>
 			<div class="row">
 				<code class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 well terminal">
 					pvc
 				</code>
 			</div>
 
+			<p>Or to trigger MSBuild:</p>
+			<div class="row">
+				<code class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 well terminal">
+					pvc build
+				</code>
+			</div>
 			<p>Check out the <a href="https://www.youtube.com/watch?v=sCNrK-n68CM">documentation</a> to learn more about how to build your pvcfile.</p>
 		</div>
 	</section>
@@ -286,47 +300,12 @@ public override string[] SupportedTags
 	<section id="contributors">
 		<div class="container">
 			<h1>Contributors</h1>
+			<p>The lifeblood of this ecosystem. We thank everyone who contributes to the PVC core or writes a plugin.</p>
 		</div>
+		<br />
 
-		<!--
-		<div class="contributors container">
-			<div class="row" id="pipemaster">
-				<div class="col-md-12">
-					<div class="media">
-						<a class="pull-left" href="https://twitter.com/stirno">
-							<img class="media-object" src="https://avatars2.githubusercontent.com/u/666175?s=460" alt="Stirno">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Brandon Stirnaman</h4>
-							<p><b>PVC</b> is developed and managed by the Pipemaster, Brandon Stirnaman.</p>
-							<ul>
-								<li><a href="https://twitter.com/stirno"><i class="fa fa-twitter-square"></i> @stirno on Twitter</a></li>
-								<li><a href="https://github.com/stirno"><i class="fa fa-github-square"></i> stirno on GitHub</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-6">
-					<div class="media">
-						<a class="pull-left" href="https://twitter.com/pzumbrun">
-							<img class="media-object" src="https://avatars2.githubusercontent.com/u/666213?s=460" alt="pauljz">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Paul Zumbrun</h4>
-							<p>Core contributor and developer of pvc-htmlcompressor, pvc-azureblob, pvc-s3, and pvc-init-plugin.</p>
-							<ul>
-								<li><a href="https://twitter.com/pzumbrun"><i class="fa fa-twitter-square"></i> @pzumbrun on Twitter</a></li>
-								<li><a href="https://github.com/pauljz"><i class="fa fa-github-square"></i> pauljz on GitHub</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		-->
+		<ul class="contributor-list">
+		</ul>
 	</section>
 
 	<footer id="footer">
@@ -336,7 +315,7 @@ public override string[] SupportedTags
 					<img src="/img/pvc-banner.png" srcset="/img/pvc-banner-2x.png 2x" alt="PVC Build">
 				</div>
 				<div class="col-xs-6 copyright">
-					Copyright &copy; 2014 PVC Build
+					Copyright &copy; 2014 Brandon Stirnaman on behalf of PVC Contributors
 				</div>
 			</div>
 		</div>
@@ -345,5 +324,6 @@ public override string[] SupportedTags
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	<script src="/js/contributors.js"></script>
 </body>
 </html>

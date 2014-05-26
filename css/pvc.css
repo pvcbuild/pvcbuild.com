@@ -284,3 +284,26 @@ color: #66d9ef;
 .token.entity {
 	cursor: help;
 }
+
+ul.contributor-list {
+	list-style-type: none;
+	position: relative;
+	text-align: center;
+}
+
+ul.contributor-list li {
+	display: inline-block;
+	text-align: center;
+	padding-right: 5px;
+}
+
+ul.contributor-list .media-object {
+	margin: 0 auto;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+}
+
+ul.contributor-list .media-object {
+	max-width: 35px;
+}
