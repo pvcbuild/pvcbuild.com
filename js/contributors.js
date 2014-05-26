@@ -23,8 +23,10 @@
 					};
 				}
 
+				contributorNames.push(anonContrib.login);
 				contributors.push(anonContrib);
 			} else {
+				contributorNames.push(contributor.login);
 				contributors.push({
 					login: contributor.login,
 					avatar_url: contributor.avatar_url,
@@ -44,6 +46,8 @@
 						contributions: plugin.owner.contributions,
 						hasLink: true
 					});
+
+					contributorNames.push(plugin.owner.login);
 				}
 			});
 
