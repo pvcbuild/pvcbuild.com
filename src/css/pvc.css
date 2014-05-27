@@ -27,6 +27,10 @@ pre[class*=language-]>code[data-language]::before { display: none; }
 
 h1 { margin-bottom: 1em; }
 
+@media (max-width: 640px) {
+	code { font-size: 0.6em; }
+}
+
 /******************************** Page Sections *************************************/
 
 #about-pvc {
@@ -183,6 +187,10 @@ h1 { margin-bottom: 1em; }
 
 .plugin-listing table {
 	font-size: 1.2em;
+}
+
+@media (max-width: 640px) {
+	.plugin-listing table { font-size: 0.8em; }
 }
 
 /******************************** Contributors section ******************************/
@@ -358,3 +366,4 @@ color: #66d9ef;
 	cursor: help;
 }
 
+/* end of prism.js CSS */
