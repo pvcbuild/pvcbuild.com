@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Plugins for People - PVC</title>
+
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Maven+Pro">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/pvc.css">
+	<link rel="stylesheet" href="/css/watsi.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target=".navbar">
+
+	<section id="header">
+		<div class="jumbotron">
+			<h1>
+				<a href="/"><img src="/img/pvc-banner.png" width="250" srcset="/img/pvc-banner-2x.png 2x" alt="PVC Build"></a>
+				<img src="/img/plus.png">
+				<a href="http://watsi.org" target="_blank"><img src="/img/watsi.png" alt="Watsi"></a>
+			</h1>
+
+			<h2>Plugins for <strong>People</strong></h2>
+		</div>
+	</section>
+
+	<section id="about-pvc">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<p style="max-width: 80%; margin: 0 auto;">
+					When I first heard about <a href="http://watsi.org" target="_blank">watsi</a>, I saw a new future for crowdfunded charities. I've been thinking about how I can help constantly.
+					</p>
+				</div>
+
+				<div class="col-md-7" style="text-align: left; font-size: 16px; padding-top: 25px;">
+				Another cause that I care a great deal about -- Open Source Software -- also needs help. Particularly in the <strong>.NET</strong> community.
+					<br /><br />
+					In an effort to engage people in our community to both expand our community and give back to others, I'm funding <strong class="red">Round 1</strong> of Plugins for <strong>People</strong>.
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="getting-started">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p style="max-width: 80%; margin: 0 auto;">
+					For the first <strong class="red">50</strong> PVC plugins built and released under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, <a href="http://opensource.org/licenses/BSD-3-Clause" target="_blank">BSD</a> or the <a href="http://opensource.org/licenses/Apache-2.0" target="_blank">Apache 2</a> license we will <strong class="blue">donate $50 to a watsi patient on behalf of the author</strong>.
+					</p>
+				</div>
+			</div>
+			<div class="row" style="padding-top: 20px; font-size: 16px;">
+				<div class="col-md-12">
+				<strong>Fine Print:</strong> To be included in this round, the plugin must be considered generally useful by the community at large. To this end we have created a number of <a href="https://github.com/pvcbuild/pvc/issues?direction=desc&labels=plugin%2Chelp+wanted&page=1&sort=created&state=open" target="_blank">Plugin Request issues</a> on <a href="https://github.com/pvcbuild/pvc" target="_blank">GitHub</a>. If your idea is not tracked here, submit a new request and lets talk about it!
+				<br /><br />
+				To get involved, comment on the issue for the plugin you're working on and follow these instructions:
+				<br /><br />
+			</div>
+			<div class="row">
+				<div class="col-md-12" style="margin-top: 25px; margin-bottom: 15px; font-size: 24px">
+					1. Install the PVC command line interface via <a href="https://chocolatey.org/" target="_blank">Chocolatey</a>.
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<code class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 well terminal">
+						cinst pvc
+					</code>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12" style="margin-bottom: 15px; font-size: 24px">
+				2. Use the PVC init scripts to create a new plugin solution
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<code class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 well terminal">
+						pvc init plugin
+					</code>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12" style="margin-bottom: 15px; font-size: 24px">
+				3. Build something great and help a person in need!
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 code">
+					<pre class=""><code class="null language-csharp">override IEnumerable&lt;PvcStream&gt; Execute(IEnumerable&lt;PvcStream&gt; streams)
+{
+    foreach (var stream in streams)
+    {
+        // Do Great Things!
+    };
+
+    return streams;
+}</code></pre>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12" style="margin-bottom: 15px; font-size: 24px">
+				For assistance reach out in our 'new' <a href="https://jabbr.net/#/rooms/pvc" target="_blank">JabbR</a> channel (<a href="https://jabbr.net/#/rooms/pvc" target="_blank">pvc</a>)!
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contributors">
+		<div class="container">
+			<h1>Contributors</h1>
+			<p>The lifeblood of this ecosystem. We thank everyone who contributes to the PVC core or writes a plugin.</p>
+		</div>
+		<br />
+
+		<ul class="contributor-list">
+		</ul>
+	</section>
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 credits">
+					<img src="/img/pvc-banner.png" srcset="/img/pvc-banner-2x.png 2x" alt="PVC Build">
+				</div>
+				<div class="col-xs-6 copyright">
+					Copyright &copy; 2014 Brandon Stirnaman on behalf of PVC Contributors
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	<script src="/js/contributors.js"></script>
+	<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-33563798-2', 'pvcbuild.com');
+  	ga('send', 'pageview');
+	</script>
+</body>
+</html>
