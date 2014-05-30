@@ -15,6 +15,7 @@ pvc.Task("push", () => {
 
 		return resultStreams;
 	   })
+	   .PipeIf("(html|js|css)$", new PvcGzip(addExtension: false))
 	   .Pipe(new PvcCloudFront(
 		accessKey: keys.accessKey,
 		secretKey: keys.secretKey,
