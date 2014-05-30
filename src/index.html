@@ -60,16 +60,17 @@
 		<div class="jumbotron">
 			<h1>
 				<img src="/img/pvc-banner.png" srcset="/img/pvc-banner-2x.png 2x" alt="PVC Build">
-				<br />
 				<!--
-				<span style="font-size: 36px; color: #fff;"> Contribute to <a href="/watsi">Plugins for People</a>
-				<div style="font-size: 24px; line-height: 20px;">Help people get important medical care</div>
+				<br />
+
+				<div style="font-size: 36px; color: #fff; padding-top: 25px;"> Contribute to <a href="/watsi">Plugins for People</a>
+				<div style="font-size: 24px;">Help people get important medical care</div>
+				</div>
 				-->
-				</span>
 			</h1>
 
-			<a href="http://github.com/pvcbuild/pvc" class="btn btn-default"><i class="fa fa-github"></i> Star on GitHub</a>
-			<a href="http://twitter.com/share?url=http://pvcbuild.com/&amp;text=Check out @pvcbuild's new site! Streaming builds for .NET!&amp;via=stirno" class="btn btn-info"><i class="fa fa-twitter"></i> Tweet about @pvcbuild!</a>
+			<a href="http://github.com/pvcbuild/pvc" class="btn btn-default" style="width: 133px; display: inline-block;"><i class="fa fa-github"></i> Star on GitHub</a>
+			<a href="http://twitter.com/share?url=http://pvcbuild.com/&amp;text=Check out @pvcbuild's new site! Streaming builds for .NET!&amp;via=stirno" class="btn btn-info" style="width: 194px; display: inline-block;"><i class="fa fa-twitter"></i> Tweet about @pvcbuild!</a>
 		</div>
 	</section>
 
@@ -289,7 +290,7 @@ pvc.Task("build", () => {
 	<section id="build-a-plugin">
 		<div class="container">
 			<h1>Build a Plugin</h1>
-			<p>Extending and creating a plugin in PVC is incredibly simple. Start out by running the init script: <code>pvc install plugin</code></p>
+			<p>Extending and creating a plugin in PVC is incredibly simple. Start out by running the init script: <code>pvc init plugin</code></p>
 			<br />
 			<p>
 			Your plugin class will extend <code>PvcPlugins.PvcPlugin</code> and implement the streaming interface.

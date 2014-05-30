@@ -19,3 +19,18 @@ h2 strong {
 .blue {
 	color: #00b1d9;
 }
+
+html {
+	overflow-x: hidden;
+}
+
+@media (max-width: 580px) {
+	.jumbotron a {
+		display: block;
+	}
+
+	.jumbotron h1 > img {
+		margin-top: 25px;
+		padding-bottom: 25px;
+	}
+}
